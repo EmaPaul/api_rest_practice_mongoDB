@@ -2,19 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/index.js",
+        "src": "index.js",
         "use": "@now/node"
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "src/routes/user.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "src/index.js"
-      }
+        {
+            "src": "/api/.*",
+            "dest": "index.js"
+          }
     ],
     "env": {
       "MONGODB_URI": "@mongodb_uri2"
