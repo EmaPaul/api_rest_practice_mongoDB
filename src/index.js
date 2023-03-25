@@ -34,7 +34,7 @@ app.listen(app.get("port"), () => {
 });
 
 // Routes
-app.use("/api", userRoutes);
+app.use("/", userRoutes);
 
 // mongodb conexion
 mongoose.set("strictQuery", false);
