@@ -1,28 +1,19 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "src/index.js",
-      "use": "@vercel/node"
+    { 
+      "src": "src/index.js", 
+      "use": "@vercel/node" 
     }
   ],
+
   "routes": [
-    {
-      "src": "/users",
-      "methods": ["POST"],
-      "dest": "/api/users"
-    },
-    {
-      "src": "/getuser",
-      "methods": ["GET"],
-      "dest": "/api/users"
-    },
-    {
-      "src": "/getuser/:id",
-      "methods": ["GET", "PUT", "DELETE"],
-      "dest": "/api/users/:id"
+    { 
+      "src": "/(.*)", 
+    "dest": "src/index.js" 
     }
   ],
+  
   "env": {
     "MONGODB_URI": "@mongodb_uri2"
   }
