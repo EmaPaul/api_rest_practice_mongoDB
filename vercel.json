@@ -8,7 +8,7 @@
     ],
 
     "env":{
-        "MONGODB_URI": ""
+        "MONGODB_URI": "@mongodb_uri2"
     }
 }
 
